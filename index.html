@@ -103,7 +103,9 @@
               <div class="form-group">
                 <div class="g-recaptcha" data-sitekey="6LcXuNYUAAAAAIIRqhDVTKCWx8RMuGJyUGzau6mJ" data-theme="dark" data-badge="inline"></div>  
               </div>
-              <input type="submit" class="g-recaptcha btn btn-success btn-send" value="Send message">
+              <a onclick="submitform();">
+                <input type="submit" class="g-recaptcha btn btn-success btn-send" value="Send message">
+              </a>
 
             </form>
           </div>
@@ -111,6 +113,13 @@
       </section>
     </div>
   </div>
+
+  <script>
+    
+    function submitform() {
+    document.getElementById('contact-form').submit();
+}
+  </script>
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script>
