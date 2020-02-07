@@ -81,23 +81,22 @@
           </div>
           <div class="contact-form">
             <b><b>Write A Message</b></p>
-            <form id="contact-form" method="POST" data-ajax="false" data-netlify-recaptcha="true" data-netlify="true">
+            <form id="contact-form" method="POST" data-netlify-recaptcha="true" data-netlify="true">
 
               <div class="form-group">
                 <input id="form_name" type="text" name="name" class="form-control" placeholder="Name" required="required"
-                    data-error="Name is required.">
+                aria-required="true" required data-error="Name is required.">
                 <div class="help-block with-errors"></div>
               </div>
               
               <div class="form-group">
                 <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required"
-                    data-error="Valid email is required.">
+                aria-required="true" required data-error="Valid email is required.">
                 <div class="help-block with-errors"></div>
               </div>
 
               <div class="form-group">
-                <textarea id="form_message" name="message" class="form-control" placeholder="Message..." rows="4" required="required"
-                    data-error="Please, leave us a message."></textarea>
+                <textarea id="form_message" name="message" class="form-control" placeholder="Message..." rows="4" required="required" aria-required="true" required data-error="Please, leave us a message."></textarea>
                 <div class="help-block with-errors"></div>
               </div>
               <div class="form-group">
