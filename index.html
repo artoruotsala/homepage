@@ -9,10 +9,10 @@
   <meta name="author" content="Arto Ruotsala">
   <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript" src="js/fullpage.js"></script>
-  <script type="text/javascript" src="js/scrolloverflow.js"></script>
+  <!-- <script type="text/javascript" src="js/fullpage.js"></script>
+  <script type="text/javascript" src="js/scrolloverflow.js"></script> -->
   <script src="https://kit.fontawesome.com/ec54376fc6.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/fullpage.css">
+  <!-- <link rel="stylesheet" href="css/fullpage.css"> -->
   <link rel="stylesheet" href="css/style.css">
   
   <title>Arto Ruotsala | Music Producer & Songwriter</title>
@@ -22,8 +22,8 @@
     <div id="status">&nbsp;</div>
   </div>
 
-  <div id="fullpage">
-    <div class="section">
+  <!-- <div id="fullpage">
+    <div class="section"> -->
       <section id="main">
         <div class="container">
           <h1>Arto Ruotsala</h1>
@@ -33,7 +33,7 @@
             <p>Scroll down to see my recent works</p>
           </div>
           <div class="album-info">
-            <a href="#secondPage">
+            <a href="#albums">
             <div class="down-circle">
               <div class="arrow-down"></div>
             </div>
@@ -41,13 +41,13 @@
           </div>
         </div>
         <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark default-color">
-          <a class="navbar-brand" href="#3rdPage">Contact</a>
+          <a class="navbar-brand" href="#contact">Contact</a>
         </nav>
       </section>
-    </div>
+    <!-- </div> -->
 
     <!-- Album Section -->
-    <div class="section">
+    <!-- <div class="section"> -->
       <section id="albums">
         <a href="https://open.spotify.com/track/18woQThR1fKUNybeg6tdgq?si=IikoDT66QEud5D8QZL9EgQ" target="listen"><div class="album album1"><div class="info">Co-Write, Production & Mixing</div></div></a>
         <a href="https://open.spotify.com/track/4jQ9Nd33d2MWbQ5zJwBUTe?si=tdQEteyZRiOGI2QX722tQw" target="listen"><div class="album album2"><div class="info">Co-Write & Production</div></div></a>
@@ -62,9 +62,9 @@
         <div class="album album11"><div class="info">Co-write, Production & Mixing</div></div>
         <a href="https://open.spotify.com/track/5SZKz2SO7NOe4VK4Z3YK63?si=1J3N_CiaQuyj1tZFRKaFJA" target="listen"><div class="album album12"><div class="info">Co-write, Production & Mixing</div></div></a>
       </section>
-    </div>
+    <!-- </div>
 
-    <div class="section">
+    <div class="section"> -->
       <section id="contact">
         <div class="container">
           <h1>Contact</h1>
@@ -110,8 +110,20 @@
           </div>
         </div>
       </section>
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
+
+  <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 
   <script>
     
@@ -140,7 +152,7 @@
 	  //]]>
   </script>   
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
         anchors: ['firstPage', 'secondPage', '3rdPage'],
         navigation:true,
@@ -148,7 +160,7 @@
         showActiveTooltip: true,
         scrollOverflow: true
     });
-</script>
+</script> -->
   
 </body>
 </html>
